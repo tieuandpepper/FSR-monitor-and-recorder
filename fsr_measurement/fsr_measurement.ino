@@ -46,7 +46,7 @@ void GetPressure(uint8_t fsrPin) {
   Serial.print(" | ");
  
   if (fsrVoltage == 0) {
-    Serial.println("Resistance[KOhm]=inf | Force[g]=0");  
+    Serial.println("Resistance[KOhm]=inf | Force[g]=0 |");  
   } else {
     // The voltage = Vcc * R / (R + FSR) where R = 10K and Vcc = 5V
     // FSR = (Vcc * R / V) - R
@@ -66,6 +66,6 @@ void GetPressure(uint8_t fsrPin) {
     
     Serial.print("Force[g]=");
     Serial.print(fsrForce);
-    Serial.println(".");
+    Serial.println(" |");
   }
 }
